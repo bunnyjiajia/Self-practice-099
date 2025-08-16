@@ -1,3 +1,39 @@
+// การบ้าน
+
+let book1 = {
+    isbn: 123456789,
+    title:"JavaScript",
+
+}
+let book2 = {
+    isbn: 123456789,
+    title:"JavaScript",
+
+}
+
+function shallowEquality(object1, object2) {
+    const keys1=Object.keys(object1)
+    const keys2=Object.keys(object2)
+
+    if (keys1.length !== keys2.length) {
+        return false
+    }
+    for (let key of keys1){
+        if (object1[key] !== object2[key]) {
+            return false
+        }
+        
+    }
+    return true
+
+}
+console.log("shallow Equality: "+ shallowEquality(book1,book2));
+
+
+
+
+
+// ---------------ฝึกเอง-------------------
 // Input: "hello"
 // Output: "olleh"
 
@@ -55,43 +91,43 @@
 
 // -----------------------------------------------------------
 
-let num = Infinity
-console.log(num+5);
+// let num = Infinity
+// console.log(num+5);
 
 
-console.log(Number.isFinite(num));
+// console.log(Number.isFinite(num));
 
 
-var v;
+// var v;
 
-console.log(typeof v);
-console.log(v === undefined);
+// console.log(typeof v);
+// console.log(v === undefined);
 
-let x ="123"
-y = Number(x)
-console.log(y);
-
-
-let e = 5 ;
-e = 6 ;
-var s = 5;
-var s = 6;
-var r = null ;
+// let x ="123"
+// y = Number(x)
+// console.log(y);
 
 
+// let e = 5 ;
+// e = 6 ;
+// var s = 5;
+// var s = 6;
+// var r = null ;
 
-console.log(e);
-
-console.log(5-"4" +3 *6**1**2/4+"1");
-console.log(5-"4" +3 *6**1**2/4+"1");
 
 
-console.log(true && "Hello");
-console.log(true && "Hello");
-console.log(true && "Hello");
-console.log(true/0.25-!false);
+// console.log(e);
+
+// console.log(5-"4" +3 *6**1**2/4+"1");
+// console.log(5-"4" +3 *6**1**2/4+"1");
+
+
+// console.log(true && "Hello");
+// console.log(true && "Hello");
+// console.log(true && "Hello");
+// console.log(true/0.25-!false);
  
 
 
 
- 
+
