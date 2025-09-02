@@ -34,6 +34,30 @@ console.log("shallow Equality: "+ shallowEquality(book1,book2));
 
 
 // ---------------ฝึกเอง-------------------
+
+let arrays = ["jia", 99,9.9,false, {firstName:"Pemika", lastName:"Pamaithong"}, ["j", "i", "a"]]
+ 
+for (let i = 0; i < arrays.length; i++) {
+    let c = arrays[i]
+    if ( typeof c === 'object' && c !== null ) {
+        if (Array.isArray(c)) {
+            console.log(`${i+1}:`)
+            for (let k of c ) {
+                console.log(`${k}`);}
+        }else{
+            console.log(`${i+1}:`)
+            for (j in c ) {
+                console.log(`${j} : ${c[j]}`);
+            }
+        }
+    }else{
+        console.log(`${i+1}: ${arrays[i]}`);
+    }
+    
+}
+
+
+
 // Input: "hello"
 // Output: "olleh"
 

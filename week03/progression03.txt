@@ -1,0 +1,44 @@
+-- อธิบายการบ้าน --
+โจทย์มีการกำหนด ว่ารันแล้วต้องออกมาเป็นคำตอบไหน จึงได้เริ่มจากการเช็ค null และ undefined ก่อน หากเป็นnull หรือ undefined ให้รีเทิร์นว่า undefined
+แต่หากไม่ใช่ จะทำตามที่โจทย์กำหนดไว้ คือให้แสดงออกเป็นตัวพิมพ์เล็กทั้งหมด และ แยกเช็คทีละตัวแล้วนำไปเช็คว่าแต่ละตัวมีกี่ตัว ถ้าในobj มี key ที่เท่ากับ word จะ+1 
+หากไม่มี จะเข้า else Obj[word] = 1 และให้รีเทิร์น Obj ออกมา ว่าในชุดข้อความนี้มีตัวอักษรซ้ำกันกี่ตัว"
+console.log(getFreqOfWords('Today is present and present is your gift'))
+// { today: 1, is: 2, present: 2, and: 1, your: 1, gift: 1 }
+
+console.log(getFreqOfWords('Do you best just do it'))
+// { do: 2, you: 1, best: 1, just: 1, it: 1 }
+
+console.log(getFreqOfWords(null))
+// undefined
+
+console.log(getFreqOfWords(undefined))
+// undefined
+
+function getFreqOfWords(sentence) {
+  if (sentence === null || sentence === undefined) {
+    return undefined
+  }
+
+  let words = sentence.toLowerCase().split(" ")
+
+  let Obj = {}
+
+  for (let word of words) {
+    if (Obj[word]) {
+      Obj[word] += 1
+    } else {
+      Obj[word] = 1
+    }
+  }
+
+  return Obj
+}
+
+ภาพรวมการเรียนรู้
+- การใช้ ฟังก์ชัน ทั้งแบบรับค่าปกติ, default, และ rest parameter
+- การจัดการ object และ array
+- การวนลูปเพื่อทำงานซ้ำ
+- การใช้ template string และ destructuring
+- การจัดการ input ที่อาจเป็น null หรือ undefined
+
+

@@ -1,0 +1,26 @@
+ครั้งที่ 1 
+    เป็นการเรียนพื้นฐานของไทป์ การเช็คไทป์ และความต่างของ var let const 
+dynamic typing
+static typing
+static มีประสิทธิภาพมากกว่า dynamic
+declaration : ประกาศตัวแปร
+
+var j; // old style - function-scope;repeatable หละหลวม
+let k; // new style -block-scope; non-repeatable
+const f = 10; // constant 3 แบบต่างกัน
+var p; // output is undefined
+
+assignment : กำหนดค่า
+initialization (first assignment)
+
+datatype : 2 type 
+primitive type : ธรรมดา พื้นฐาน มีอยู่แล้ว
+derived/abstract/user-defined type : ถูกพัฒนาขึ้นมา กำหนดขึ้นมา (object datatype)
+
+today focus primitive datatype
+number-bigint(จำนวนเต็ม),character(ตัวอักษร)/string(ต่อๆๆกันเป็นสาย),boolean,special type[undefined != null](represent nothing-ness),symbol:ไม่ซ้ำกับของที่สร้างแล้ว
+type : value /boolean:true false
+
+
+operator : typeof ==> for typing 
+

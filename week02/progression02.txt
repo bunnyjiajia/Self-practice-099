@@ -1,0 +1,40 @@
+
+let book1 = {
+    isbn: 123456789,
+    title:"JavaScript",
+
+}
+let book2 = {
+    isbn: 123456789,
+    title:"JavaScript",
+
+}
+
+'เรามี object book1 และ book2 ข้างในมี property เดียวกัน (isbn และ title) และค่าก็เหมือนกัน '
+
+function shallowEquality(object1, object2) {
+    const keys1=Object.keys(object1) เอา key ทั้งหมด(isbn และ title) ของ object1 มาเก็บไว้ในตัวแปร keys1
+    const keys2=Object.keys(object2) เอา key ทั้งหมด(isbn และ title) ของ object2 มาเก็บไว้ในตัวแปร keys2
+
+    if (keys1.length !== keys2.length) {
+        return false
+    }
+    for (let key of keys1){
+        if (object1[key] !== object2[key]) {
+            return false
+        }
+        
+    }
+    return true
+
+}
+console.log("shallow Equality: "+ shallowEquality(book1,book2));
+
+"object1 จะหมายถึง book1 object2 จะหมายถึง book2 และเนื่องจาก ข้างในมี property เดียวกัน ค่าเหมือนกัน 
+จึงไม่ได้เข้้าเงื่อนไขที่บอกว่า keys1.length !== keys2.length(ตรวจสอบจากจำนวน) และไม่เข้าเงื่อนไขภายในลูป object1[key] !== object2[key](ตรวจสอบค่า)
+ คำตอบจึงเป็น true "
+
+ฝึกเพิ่มเติม มีการฝึกใช้ for in และ for of และการเขียนให้แสดงถึง object/array  ที่อยู่ภายใน array อีกที มีการฝึกใช้ split , include ,indexOf
+
+
+
